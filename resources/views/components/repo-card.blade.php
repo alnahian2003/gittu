@@ -47,7 +47,7 @@
         <div class="mt-4 flex flex-wrap gap-2">
             @foreach ($repo->topics as $topic)
                 <a href={{ 'https://github.com/topics/' . $topic }}
-                    class="bg-teal-100 text-teal-800 text-xs font-medium px-4 py-2 rounded-full dark:bg-teal-900 dark:text-teal-300 shrink-0"
+                    class="text-xs font-medium px-4 py-2 rounded-full bg-teal-900 text-teal-300 shrink-0"
                     target="_blank">
                     {{ $topic }}</a>
             @endforeach

@@ -1,6 +1,6 @@
 <x-repo-layout>
     <x-slot name="header">
-        <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h1 class="font-semibold text-4xl text-gray-200 leading-tight">
             {{ __('Top 30 Repositories 🌟') }}
             </h2>
     </x-slot>

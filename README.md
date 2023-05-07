@@ -1,66 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!-- Preview Image -->
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Preview](preview.png)
 
-## About Laravel
+# Gittu — Top 30 Github Repositories
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+For this project, I utilized Laravel's HTTP Client to create a Github API endpoint that retrieves and stores the top 30 repositories. Additionally, I optimized the data using Cache to enhance its performance. I also ensured clean code by utilizing Blade components.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   Auto Update Repositories Daily Using Task Scheduler
+-   Custom Artisan Command To Update The Repositories
+-   Super Simple With Modern Layout
+-   Laravel Breeze Installed By Default
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Please check the [Laravel Official Documentation](https://laravel.com/docs/master/installation) installation guide for server requirements before you start.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+First, clone this repo
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+git clone https://github.com/alnahian2003/gittu.git
+```
 
-## Laravel Sponsors
+Switch to the repo folder
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+cd gittu
+```
 
-### Premium Partners
+Install all the dependencies using composer and npm
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```bash
+composer install
+```
 
-## Contributing
+```bash
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Copy the `.env.example` file and make the required configuration changes in the .env file
 
-## Code of Conduct
+```bash
+cp .env.example .env
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Generate a new application key
 
-## Security Vulnerabilities
+```bash
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Run the database migrations (Set the database connection in .env before migrating)
 
-## License
+```bash
+php artisan migrate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Start the local development server
+
+```bash
+php artisan serve
+```
+
+**You can now access the server at http://localhost:8000.**
+
+### TL;DR
+
+All the command list
+
+```bash
+git clone https://github.com/alnahian2003/gittu.git
+```
+
+```bash
+cd gittu
+```
+
+```bash
+composer install
+```
+
+```bash
+npm install
+```
+
+```bash
+cp .env.example .env
+```
+
+```bash
+php artisan key:generate
+```
+
+```bash
+php artisan migrate
+```
+
+```bash
+php artisan serve
+```
+
+## Tech Stack
+
+**Client Side:** Blade, Breeze, TailwindCSS
+
+**Server Side:** PHP, Laravel
+
+## Note
+
+You can clone and use this repo for reference and to practice more effectively. You don't even need to provide any backlink for that. Happy to help!
+
+## Support
+
+Don't miss out my latest [Laravel Tips and Tricks on Twitter](https://twitter.com/alnahian2003)
+For support, [contact me](https://alnahian2003.github.io#contact) or pull an issue.
+
+<!-- অত্যন্ত দুঃখিত যে, আজকের ভিডিওটা বেশ বড় হয়ে গেলো...
+তবে আমার বিশ্বাস, বিগিনার কিংবা ইন্টারমিডিয়েট লারাভেল ডেভেলপারদের কাছে আজকের টপিক - প্র্যাক্টিক্যাল ক্যাশ (Cache) এবং HTTP Client অনেক নতুন চিন্তার দরজা খুলে দেবে!
+অনেকসময় আপনার লারাভেল অ্যাপে এক্সটার্নাল এপিআই থেকে ডেটা আদান-প্রদানের প্রয়োজন হতে পারে। এক্ষেত্রে লারাভেল খুবই সুন্দর ভাবে Guzzle Http এর ওপরে HTTP ক্লায়েন্ট বানিয়ে দিয়েছে। সহজেই এখন সব ধরণের অ্যাকশন করা যাচ্ছে!
+আবার রিসেন্টলি গ্রুপে দেখলাম লারাভেল সাইট স্লো, কীভাবে ইমপ্রুভ করবেন বলে জানতে চেয়েছেন। লারাভেল অ্যাপ অপ্টিমাইজেশনের অনেক গুলো ফ্যাক্টরের মাঝে ক্যাশ নিয়ে কারসাজি একটা বিরাট রোল প্লে করে। তবে পার্ফেক্ট ভাবে ক্যাশ ফিচার ইমপ্লিমেন্ট করাটাই একজন ডেভেলপার হিসেবে আসল গেম! পুরোই আপনার সিদ্ধান্ত, প্ল্যান আর অ্যানালাইসিসের ওপরে নির্ভর করবে ব্যাপারটা।
+আপনাদের সাথে সাথে আমিও শিখেছি। তবে আবারও দুঃখিত, আমার হেডফোনের মাইক্রোফোনটা আগেরচেয়ে খুবই বাজে হয়ে যাওয়ায় ভয়েস ও সাউন্ড কোয়ালিটি আগেরচেয়ে অনেক ডাউন হয়ে গিয়েছে... 🙁
+(কেউ প্রোফেশনাল স্টুডিও মাইক্রোফোন গিফট করলে আমি কিছু মনে করব না 😁🙈)
+পুনশ্চঃ সময় নিয়ে নিশ্চিন্তে কোথাও বসে একবার ডকুমেন্টেশন পড়ে নিন, এরপরে ভিডিওটা দেখে নিজের মত করে নিজের কোনো প্রজেক্টে শেখা বিষয় গুলো ইমপ্লিমেন্ট করুন। আমার 'গিট্টু' প্রজেক্টের গিটহাব রিপোজিটরি লিংক আর অন্যান্য ডকুমেন্টেশন লিংক থাকবে প্রথম কমেন্টে। -->
