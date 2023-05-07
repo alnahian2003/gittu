@@ -9,7 +9,7 @@
             <x-repo-card :repo='$repository'></x-repo-card>
 
         @empty
-            Fuck off!
+            Ooops... Couldn't find any repositories.
         @endforelse
     </x-repo-container>
 
