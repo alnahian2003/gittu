@@ -12,8 +12,7 @@ class RepositoryController extends Controller
      */
     public function index()
     {
-        $repositories = cache()
-            ->remember('top-repos', now()->addMinutes(60), fn () => Repository::all());
+        $repositories = cache()->remember('top-repos', now()->addMinutes(60), fn () => Repository::all());
 
         return view('repositories.index', ['repositories' => $repositories]);
     }
@@ -34,6 +33,9 @@ class RepositoryController extends Controller
         if ($repos->successful()) {
             info('Attempting to Store Repos');
 
+            // Invalidate the cache before updating repos.
+            cache()->delete('repos');
+
             foreach ($repos->collect('items') as $repoData) {
                 Repository::updateOrCreate(
                     ['name' => $repoData['name']],
@@ -53,7 +55,9 @@ class RepositoryController extends Controller
 
             info('Repos Stored Successfully!');
         }
-        
-        logger()->error('Something went wrong!');
+
+        if ($repos->failed()) {
+            logger()->error('Something went wrong!');
+        }
     }
 }
